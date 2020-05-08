@@ -357,7 +357,7 @@
 
 \vspace{0.25cm plus 0.25cm minus 0.25cm}
 
-\TheSignature
+\includegraphics[width=3cm]{\TheSignature}\\
 \ifthenelse{\equal{\TheFromDegreePreSig}{}}{\TheFromDegreePre}{\TheFromDegreePreSig}
 \TheFromName%
 \ifthenelse{\equal{\TheFromDegreePostSig}{}}{\ifthenelse{\equal{\TheFromDegreePost}{}}{}{, \TheFromDegreePost}}{, \TheFromDegreePostSig}%
