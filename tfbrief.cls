@@ -100,7 +100,7 @@
 }
 
 
-\ProcessOptions
+\ProcessOptions{}
 
 \LoadClass[12pt,a4paper]{scrartcl}
 
@@ -219,9 +219,9 @@
 
 \newcommand{\fromheaderentry}[2][]{%
 \ifthenelse{\equal{\flagfromheadernarrow}{}}{%
-\ifthenelse{\equal{#1}{}}{}{\hspace*{-2cm}\makebox[2cm][r]{\itshape\footnotesize{}#1\hspace{1em}}#2\\}%
+\ifthenelse{\equal{#1}{}}{}{\hspace*{-2cm}\makebox[2cm][r]{\textit\footnotesize{}#1\hspace{1em}}#2\\}%
 }{%
-\ifthenelse{\equal{#1}{}}{}{{\itshape\footnotesize\vspace*{-0.25em}#1}\\#2\\}%
+\ifthenelse{\equal{#1}{}}{}{{\textit\footnotesize\vspace*{-0.25em}#1}\\#2\\}%
 }
 }
 
@@ -261,11 +261,11 @@
 %\end{minipage}\\
 \vspace*{2.5cm}
 \begin{minipage}[t]{\linewidth}\vspace*{-0.1pt}
-{\fontfamily{phv}\fontseries{mc}\selectfont \scriptsize \ifthenelse{\equal{\TheFromNameShort}{}}{\TheFromName}{\TheFromNameShort} $\cdot$ \ifthenelse{\equal{\TheFromStreetShort}{}}{\TheFromStreet}{\TheFromStreetShort} $\cdot$ \ifthenelse{\equal{\TheFromCityCC}{}}{\TheFromCityCode}{\TheFromCityCC --\TheFromCityCode} \ifthenelse{\equal{\TheFromCityShort}{}}{\TheFromCity}{\TheFromCityShort} \ifthenelse{\equal{\TheFromCountry}{}}{}{$\cdot$ \TheFromCountry} \vspace{-1ex} \rule{0cm}{0cm}\\\hrule\rule{0cm}{0cm}}
+	{\fontfamily{phv}\fontseries{mc}\selectfont \scriptsize \ifthenelse{\equal{\TheFromNameShort}{}}{\TheFromName}{\TheFromNameShort} $\cdot$ \ifthenelse{\equal{\TheFromStreetShort}{}}{\TheFromStreet}{\TheFromStreetShort} $\cdot$ \ifthenelse{\equal{\TheFromCityCC}{}}{\TheFromCityCode}{\TheFromCityCC{} --\TheFromCityCode} \ifthenelse{\equal{\TheFromCityShort}{}}{\TheFromCity}{\TheFromCityShort} \ifthenelse{\equal{\TheFromCountry}{}}{}{$\cdot$ \TheFromCountry} \vspace{-1ex} \rule{0cm}{0cm}\\\hrule\rule{0cm}{0cm}}
 
-\TheToName \\
+\TheToName\\
 \ifthenelse{\equal{\TheToStreet}{}}{\vspace*{0.75ex}\\}{\TheToStreet\vspace*{0.6ex}\\}
-{\bfseries \ifthenelse{\equal{\TheToCityCC}{}}{\TheToCityCode}{\TheToCityCC --\TheToCityCode} \TheToCity}
+{\bfseries \ifthenelse{\equal{\TheToCityCC}{}}{\TheToCityCode}{\TheToCityCC{} --\TheToCityCode} \TheToCity}
 \ifthenelse{\equal{\TheToCountry}{}}{}{\vspace*{0.6ex}\\\textbf{\MakeTextUppercase{\TheToCountry}}}
 \ifthenelse{\equal{\TheToFax}{}}{}{\
 
@@ -340,7 +340,7 @@
 
 \TheGreeting%
 
-\textbodyalignment
+\textbodyalignment{}
 \renewcommand{\baselinestretch}{1.2}\normalsize%
 }%
 {%
@@ -352,7 +352,7 @@
 \ifthenelse{\equal{\TheLeave}{}}{}{\
 \vspace{1.5em plus 0.75em minus 0.75em}
 
-\TheLeave
+\TheLeave{}
 }
 
 \vspace{0.25cm plus 0.25cm minus 0.25cm}
@@ -374,7 +374,7 @@
 %\enlargethispage{2cm}
 %\vspace{2cm plus 2fil minus 1cm}
 \vspace{2cm plus 2cm minus 1cm}\vfill
-\TheAttachmentLabel
+\TheAttachmentLabel{}
 \begin{itemize}
 \setlength{\itemsep}{0cm}
 }
