@@ -14,11 +14,11 @@
 \PassOptionsToClass{ngerman}{babel}%
 }
 
-\newcommand{\labelphone}{Telefon}
-\newcommand{\labelfax}{Fax}
-\newcommand{\labelmobile}{Mobil}
-\newcommand{\labelemail}{E-Mail}
-\newcommand{\labelwww}{WWW}
+\newcommand{\labelphone}{\faPhone}
+\newcommand{\labelfax}{\faFax}
+\newcommand{\labelmobile}{\faMobile*}
+\newcommand{\labelemail}{\faAt}
+\newcommand{\labelwww}{\faScroll}
 \newcommand{\labelourref}{Unser Zeichen}
 \newcommand{\labelyourref}{Ihr Zeichen}
 \newcommand{\labelviafaxto}[1]{per FAX an #1}
@@ -123,6 +123,11 @@
 % http://tug.ctan.org/info?id=ragged2e
 \RequirePackage{ragged2e}
 
+% Fontawesome 5 Icons
+\RequirePackage{fontawesome5}
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
 
 
 \newlength{\fromwidth}
