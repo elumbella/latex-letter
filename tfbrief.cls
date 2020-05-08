@@ -364,6 +364,10 @@
 \ifthenelse{\equal{\TheFromTitleSig}{}}{\ifthenelse{\equal{\TheFromTitle}{}}{}{\\\TheFromTitle}}{\\\TheFromTitleSig}%
 }
 
+\newcommand{\attachments}[1]{\
+\vspace{2cm plus 2cm minus 1cm}\vfill
+	\textit{\color{lightgray}{\faPaperclip\ \labelattachment: #1}}
+}
 
 \newenvironment{attachment}[1][\labelattachment]{
 \newcommand{\TheAttachmentLabel}{#1}
