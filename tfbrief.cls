@@ -229,7 +229,7 @@
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{1.75ex plus 0.75ex minus 0.75ex}
 
-\newenvironment{letter}{
+\newenvironment{letter}{\
 \thispagestyle{empty}
 %
 \setlength{\unitlength}{1mm}%
@@ -267,11 +267,11 @@
 \ifthenelse{\equal{\TheToStreet}{}}{\vspace*{0.75ex}\\}{\TheToStreet\vspace*{0.6ex}\\}
 {\bfseries \ifthenelse{\equal{\TheToCityCC}{}}{\TheToCityCode}{\TheToCityCC --\TheToCityCode} \TheToCity}
 \ifthenelse{\equal{\TheToCountry}{}}{}{\vspace*{0.6ex}\\\textbf{\MakeTextUppercase{\TheToCountry}}}
-\ifthenelse{\equal{\TheToFax}{}}{}{
+\ifthenelse{\equal{\TheToFax}{}}{}{\
 
 \vspace{0.5em}
 \fbox{\footnotesize\labelviafaxto{\TheToFax}}}
-\ifthenelse{\equal{\TheToEMail}{}}{}{
+\ifthenelse{\equal{\TheToEMail}{}}{}{\
 
 \vspace{0.5em}
 \fbox{\footnotesize\labelviaemailto{\TheToEMail}}}
@@ -349,7 +349,7 @@
 % of the letter's last paragraph will be set to 1.0, too.
 \renewcommand{\baselinestretch}{1.0}\normalsize
 
-\ifthenelse{\equal{\TheLeave}{}}{}{
+\ifthenelse{\equal{\TheLeave}{}}{}{\
 \vspace{1.5em plus 0.75em minus 0.75em}
 
 \TheLeave
